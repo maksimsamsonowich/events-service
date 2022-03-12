@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event service</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <style>
+        body, html {
+            background-color: black;
+            height: 100%;
+            font-family: "Inconsolata", sans-serif;
+        }
+        .bgimg {
+            animation-name: Appearance;
+            animation-duration: 2s;
+            animation-timing-function: cubic-bezier(.1,-.6,.2,0);
+            background-position: center;
+            background-size: contain;
+            display: flex;
+            background-image: url(https://images.squarespace-cdn.com/content/v1/5521d1f8e4b01852f6f76aa9/1534698835093-NG5QT2927Q7EI2QOSTR4/Juice+WRLD+%281%29.jpg);
+            min-height: 100%;
+        }
+        .shadowtext {
+            text-shadow: 1px 1px 2px black, 0 0 1em black; /* Параметры тени */
+        }
+        @-webkit-keyframes Appearance {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+
+        @-o-keyframes Appearance {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+
+        @-moz-keyframes Appearance {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+    </style>
+
+</head>
+<body>
+<div class="w3-top">
+    <div class="w3-row w3-padding w3-black">
+        <div class="w3-col s3">
+            <a href="/" class="w3-button w3-block w3-black">Home</a>
+        </div>
+        <div class="w3-col s3">
+            <a href="/events" class="w3-button w3-block w3-black">Events</a>
+        </div>
+        <div class="w3-col s3">
+            <a href="/tickets" class="w3-button w3-block w3-black">Tickets</a>
+        </div>
+        <div class="w3-col s3">
+            <a href="/artists" class="w3-button w3-block w3-black">Artists</a>
+        </div>
+    </div>
+</div>
+
+    <header class="bgimg" id="home">
+        <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+            <span class="w3-tag">The cheapest tickets </span>
+        </div>
+        <div class="w3-display-middle w3-center shadowtext">
+            <span class="w3-text-white" style="font-size:90px"><b>LND</b></span>
+        </div>
+        <div class="w3-display-bottomright w3-center w3-padding-large">
+            <span class="w3-tag">15 Adr street, 5015</span>
+        </div>
+    </header>
+</body>
+</html>

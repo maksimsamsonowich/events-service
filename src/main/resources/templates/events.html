@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event service</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <style>
+        body, html {
+            background-color: black;
+            height: 100%;
+            font-family: "Inconsolata", sans-serif;
+        }
+        .bgimg {
+            animation-name: Appearance;
+            animation-duration: 2s;
+            animation-timing-function: cubic-bezier(.1,-.6,.2,0);
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            background-image: url(https://wallpapercave.com/wp/wp6183622.png);
+            min-height: 100%;
+        }
+        @-webkit-keyframes Appearance {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+
+        @-o-keyframes Appearance {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+
+        @-moz-keyframes Appearance {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+    </style>
+
+</head>
+<body>
+<div class="w3-top">
+    <div class="w3-row w3-padding w3-black">
+        <div class="w3-col s3">
+            <a href="/" class="w3-button w3-block w3-black">Home</a>
+        </div>
+        <div class="w3-col s3">
+            <a href="/events" class="w3-button w3-block w3-black">Events</a>
+        </div>
+        <div class="w3-col s3">
+            <a href="/tickets" class="w3-button w3-block w3-black">Tickets</a>
+        </div>
+        <div class="w3-col s3">
+            <a href="/artists" class="w3-button w3-block w3-black">Artists</a>
+        </div>
+    </div>
+</div>
+
+<header class="bgimg" id="home">
+</header>
+
+<div>
+
+    <tr th:each="event:${events}">
+        <div class="w3-center">
+            <span class="w3-text-white" style="font-size:10px"><td th:utext= "${event.title}">...</td></span>
+        </div>
+    </tr>
+
+</div>
+</body>
+</html>
