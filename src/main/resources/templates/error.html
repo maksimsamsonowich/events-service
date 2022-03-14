@@ -16,10 +16,13 @@
             animation-duration: 2s;
             animation-timing-function: cubic-bezier(.1,-.6,.2,0);
             background-position: center;
-            background-size: cover;
+            background-size: contain;
             display: flex;
-            background-image: url(https://cutewallpaper.org/22/xxxtentacion-juice-wrld-lil-peep-wallpapers/242447002.jpg);
+            background-image: url(https://images.squarespace-cdn.com/content/v1/5521d1f8e4b01852f6f76aa9/1534698835093-NG5QT2927Q7EI2QOSTR4/Juice+WRLD+%281%29.jpg);
             min-height: 100%;
+        }
+        .shadowtext {
+            text-shadow: 1px 1px 2px black, 0 0 1em black; /* Параметры тени */
         }
         @-webkit-keyframes Appearance {
             0% {opacity: 0;}
@@ -57,30 +60,15 @@
 </div>
 
 <header class="bgimg" id="home">
-    <div class="w3-content w3-display-middle" style="max-width:700px">
-        <h5 class="w3-center"><span class="w3-tag">TICKET OFFER:</span></h5>
-            <form action="/action_page.php" target="_blank">
-                <p><input id="nname" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-                <p><input id="nnum" class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many tickets" required name="People"></p>
-                <p><input id="event" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Event" required name="Event" th:value="${event}"></p>
-                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
-                <p><button onclick="redirect()"
-                           class="w3-button w3-black" type="submit">Submit</button></p>
-            </form>
-        </div>
+    <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+        <span class="w3-tag">The cheapest tickets </span>
+    </div>
+    <div class="w3-display-middle w3-center shadowtext">
+        <span class="w3-text-white" style="font-size:90px"><b th:utext="${message}">...</b></span>
+    </div>
+    <div class="w3-display-bottomright w3-center w3-padding-large">
+        <span class="w3-tag">15 Adr street, 5015</span>
+    </div>
 </header>
-
-<script>
-
-    function redirect() {
-        var name = document.getElementById('nname').value;
-        var num = document.getElementById('nnum').value;
-        var event = document.getElementById('event').value;
-
-        window.location.href = "/tickets/" + event + "/" + name + "/" + num;
-    };
-
-</script>
-
 </body>
 </html>

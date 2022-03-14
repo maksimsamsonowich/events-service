@@ -15,6 +15,7 @@ public class EventService implements IEventService {
 
     private final EventRepository eventRepository;
 
+
     @Override
     public Event getEventById(Long id) {
 
@@ -27,5 +28,6 @@ public class EventService implements IEventService {
 
         return eventRepository.findAll();
     }
+
 
 }

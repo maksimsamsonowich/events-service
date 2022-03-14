@@ -13,11 +13,6 @@ public class EventController {
 
     private final IEventService iEventService;
 
-    public String getEventsPage(Model model) {
-
-        return "events";
-    }
-
     @GetMapping("events")
     public String getEventById(Model model) {
         model.addAttribute("events", iEventService.getAllEvents());
