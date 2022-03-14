@@ -16,7 +16,8 @@
             text-align: left;
         }
         .margin {
-            margin-top: 50px;
+            margin-top: 10px;
+
         }
         .bgimg {
             animation-name: Appearance;
@@ -65,9 +66,10 @@
 
 <header class="bgimg" id="home">
 
+    <div class="album py-5 center-block">
+        <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 margin">
         <tr th:each="event:${events}">
-            <div class="w3-center">
                 <div class="col">
                     <div class="card shadow-sm">
                         <div class="card-body">
@@ -85,8 +87,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </tr>
+    </div>
+        </div>
     </div>
 
 </header>
