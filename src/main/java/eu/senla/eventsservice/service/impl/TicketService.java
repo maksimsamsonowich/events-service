@@ -32,6 +32,10 @@ public class TicketService {
             throw new RuntimeException("There is no such event.");
 
         String[] info = customerName.split(" ");
+
+        if (info.length == 1)
+            throw new RuntimeException("Something went wrong");
+
         User user = userRepository.findUserByFirstNameAndSurname(info[0], info[1]);
 
         if (Objects.isNull(user)) {
@@ -51,9 +55,7 @@ public class TicketService {
             throw new RuntimeException("You trying to buy too much tickets.");
         }
 
-        for (int a = 0; a < count; a++) {
-            ticketRepository.save(currentTicket);
-        }
+        ticketRepository.save(currentTicket);
 
         throw new RuntimeException("Success!");
     }
