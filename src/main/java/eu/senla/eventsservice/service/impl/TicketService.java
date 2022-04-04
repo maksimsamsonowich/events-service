@@ -33,7 +33,7 @@ public class TicketService {
 
         String[] info = customerName.split(" ");
 
-        if (info.length == 1)
+        if (info.length == 1 || count <= 0)
             throw new RuntimeException("Something went wrong");
 
         User user = userRepository.findUserByFirstNameAndSurname(info[0], info[1]);
