@@ -39,4 +39,20 @@
         <sqlFile encoding="utf8" path="./sql/29.tickets-data-insert.sql" relativeToChangelogFile="true"/>
     </changeSet>
 
+    <changeSet id="homework-6-insert" author="Maksim Samsonowich">
+        <sqlFile encoding="utf8" path="./sql/30.artists-data-insert2.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="homework-6-insert_data" author="Maksim Samsonowich">
+        <sqlFile encoding="utf8" path="./sql/31.artists-data-insert3.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="homework-6-insert_data_into" author="Maksim Samsonowich">
+        <sqlFile encoding="utf8" path="./sql/32.events-data-insert2.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="homew" author="Maksim Samsonowich">
+        <sqlFile encoding="utf8" path="./sql/33.events-data-insert3.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
 </databaseChangeLog> 
