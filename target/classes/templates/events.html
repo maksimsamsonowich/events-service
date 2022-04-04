@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event service</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <style>
+        body, html {
+            background-color: black;
+            height: 100%;
+            font-family: "Inconsolata", sans-serif;
+        }
+        .blockstext {
+            text-align: left;
+        }
+        .margin {
+            margin-top: 10px;
+
+        }
+        .bgimg {
+            animation-name: Appearance;
+            animation-duration: 2s;
+            animation-timing-function: cubic-bezier(.1,-.6,.2,0);
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            background-image: url(https://wallpapercave.com/wp/wp6183622.png);
+            min-height: 100%;
+        }
+        @-webkit-keyframes Appearance {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+
+        @-o-keyframes Appearance {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+
+        @-moz-keyframes Appearance {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+    </style>
+
+</head>
+<body>
+<div class="w3-top">
+    <div class="w3-row w3-padding w3-black">
+        <div class="w3-col s3">
+            <a href="/" class="w3-button w3-block w3-black">Home</a>
+        </div>
+        <div class="w3-col s3">
+            <a href="/events" class="w3-button w3-block w3-black">Events</a>
+        </div>
+        <div class="w3-col s3">
+            <a href="/tickets" class="w3-button w3-block w3-black">Tickets</a>
+        </div>
+        <div class="w3-col s3">
+            <a href="/artists" class="w3-button w3-block w3-black">Artists</a>
+        </div>
+    </div>
+</div>
+
+<header class="bgimg" id="home">
+
+    <div class="album py-5 center-block">
+        <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 margin">
+        <tr th:each="event:${events}">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <td th:utext= "${event.eventOrganizer.nickname}">...</td>:
+                                <td th:utext= "${event.title}">...</td> (<td th:utext= "${event.ageLimit}">...</td>+)
+                            </p>
+                            <p class="blockstext"><td th:utext= "${event.description}">...</td></p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a th:href="@{/tickets/{event}(event=${event.title})}" class="w3-button w3-block w3-black">Order</a>
+                                </div>
+                                <small class="text-muted"><td th:utext= "${event.occupiedPlace}">...</td>/100</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </tr>
+    </div>
+        </div>
+    </div>
+
+</header>
+
+</body>
+</html>

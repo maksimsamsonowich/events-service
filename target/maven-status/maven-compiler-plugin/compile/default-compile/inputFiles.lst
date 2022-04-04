@@ -1,0 +1,17 @@
+/home/user/IdeaProjects/events-service/src/main/java/eu/senla/eventsservice/controller/EventController.java
+/home/user/IdeaProjects/events-service/src/main/java/eu/senla/eventsservice/controller/GreetingsController.java
+/home/user/IdeaProjects/events-service/src/main/java/eu/senla/eventsservice/repositry/TicketRepository.java
+/home/user/IdeaProjects/events-service/src/main/java/eu/senla/eventsservice/service/impl/ArtistService.java
+/home/user/IdeaProjects/events-service/src/main/java/eu/senla/eventsservice/model/User.java
+/home/user/IdeaProjects/events-service/src/main/java/eu/senla/eventsservice/repositry/EventRepository.java
+/home/user/IdeaProjects/events-service/src/main/java/eu/senla/eventsservice/service/impl/EventService.java
+/home/user/IdeaProjects/events-service/src/main/java/eu/senla/eventsservice/model/Ticket.java
+/home/user/IdeaProjects/events-service/src/main/java/eu/senla/eventsservice/service/impl/TicketService.java
+/home/user/IdeaProjects/events-service/src/main/java/eu/senla/eventsservice/EventsServiceApplication.java
+/home/user/IdeaProjects/events-service/src/main/java/eu/senla/eventsservice/model/Event.java
+/home/user/IdeaProjects/events-service/src/main/java/eu/senla/eventsservice/model/Artist.java
+/home/user/IdeaProjects/events-service/src/main/java/eu/senla/eventsservice/controller/ArtistController.java
+/home/user/IdeaProjects/events-service/src/main/java/eu/senla/eventsservice/service/IEventService.java
+/home/user/IdeaProjects/events-service/src/main/java/eu/senla/eventsservice/repositry/UserRepository.java
+/home/user/IdeaProjects/events-service/src/main/java/eu/senla/eventsservice/repositry/ArtistRepository.java
+/home/user/IdeaProjects/events-service/src/main/java/eu/senla/eventsservice/controller/TicketsController.java
